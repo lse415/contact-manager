@@ -7,11 +7,11 @@ import { Contact } from '../models/contact';
 })
 export class ContactService {
   private contacts: Contact[] = [
-    { id: 1, name: 'John Doe', email: 'johndoe@example.com', phone: '123-456-7890' },
-    { id: 2, name: 'Jane Smith', email: 'janesmith@example.com', phone: '123-456-7890' },
-    { id: 3, name: 'Bob Johnson', email: 'bobjohnson@example.com', phone: '123-456-7890' },
-    { id: 4, name: 'Sarah Williams', email: 'sarahwilliams@example.com', phone: '123-456-7890' },
-    { id: 5, name: 'Tom Brown', email: 'tombrown@example.com', phone: '123-456-7890' }
+    { id: 1, firstName: 'John', lastName: 'Doe', email: 'johndoe@example.com', phone: '123-456-7890' },
+    { id: 2, firstName: 'Jane', lastName: 'Smith', email: 'janesmith@example.com', phone: '123-456-7890' },
+    { id: 3, firstName: 'Bob', lastName: 'Johnson', email: 'bobjohnson@example.com', phone: '123-456-7890' },
+    { id: 4, firstName: 'Sarah', lastName: 'Williams', email: 'sarahwilliams@example.com', phone: '123-456-7890' },
+    { id: 5, firstName: 'Tom', lastName: 'Brown', email: 'tombrown@example.com', phone: '123-456-7890' }
   ];
 
   constructor() { }

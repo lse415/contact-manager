@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Contact } from '../models/contact';
 import { ContactService } from '../services/contact.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-list',
@@ -41,7 +40,8 @@ export class ContactListComponent implements OnInit {
   onSubmit(): void {
     const newContact: Contact = {
       id: this.contactService.getNextId(),
-      name: this.contactForm.value.name,
+      firstName: this.contactForm.value.firstName,
+      lastName: this.contactForm.value.lastName,
       phone: this.contactForm.value.phone,
       email: this.contactForm.value.email
     };

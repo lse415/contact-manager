@@ -26,14 +26,16 @@ export class EditContactComponent implements OnInit {
     this.contact = this.contactService.getContact(id)!;
 
     this.contactForm = this.formBuilder.group({
-      name: [this.contact.name, Validators.required],
+      firstName: [this.contact.firstName, Validators.required],
+      lastName: [this.contact.lastName, Validators.required],
       phone: [this.contact.phone, Validators.required],
       email: [this.contact.email, Validators.email]
     });
   }
 
   onSubmit(): void {
-    this.contact.name = this.contactForm.value.name;
+    this.contact.firstName = this.contactForm.value.firstName;
+    this.contact.lastName = this.contactForm.value.lastName;
     this.contact.phone = this.contactForm.value.phone;
     this.contact.email = this.contactForm.value.email;
     this.contactService.editContact(this.contact);

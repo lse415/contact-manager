@@ -10,6 +10,6 @@ export class ContactComponent {
   @Input() contact: Contact;
 
   constructor() {
-    this.contact = new Contact(0, '', '', '');
+    this.contact = new Contact(0, '', '', '', '');
   }
 }

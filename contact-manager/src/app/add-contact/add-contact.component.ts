@@ -12,7 +12,7 @@ import { ContactService } from '../services/contact.service';
 })
 export class AddContactComponent implements OnInit {
   contactForm!: FormGroup;
-  contact: Contact = new Contact(0, '', '', '');
+  contact: Contact = new Contact(0, '', '', '', '');
 
   constructor(
     private formBuilder: FormBuilder,
@@ -22,7 +22,8 @@ export class AddContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.contactForm = this.formBuilder.group({
-      name: ['', Validators.required],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
       phone: ['', Validators.required],
       email: ['', Validators.email]
     });
@@ -31,7 +32,8 @@ export class AddContactComponent implements OnInit {
   onSubmit(): void {
     const contact: Contact = {
       id: this.contactService.getNextId(),
-      name: this.contactForm.value.name,
+      firstName: this.contactForm.value.firstName,
+      lastName: this.contactForm.value.lastName,
       phone: this.contactForm.value.phone,
       email: this.contactForm.value.email
     };
