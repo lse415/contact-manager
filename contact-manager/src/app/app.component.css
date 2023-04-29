@@ -1,0 +1,36 @@
+/* app.component.css */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+  /* contact-list.component.css */
+
+.contact-list {
+    margin: 2rem auto;
+}
+
+.contact-list h2 {
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,26 @@
+<div class="contact-list">
+    <h2>Contacts</h2>
+    <table>
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contact of contacts">
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.phone }}</td>
+            <td>
+                <a routerLink="/edit-contact/{{ contact.id }}">Edit</a>
+                <button (click)="deleteContact(contact)">Delete</button>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-primary btn-lg" routerLink="/home" role="button">home</a>
+</div>
+
