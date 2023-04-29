@@ -15,7 +15,7 @@
             <td>{{ contact.email }}</td>
             <td>{{ contact.phone }}</td>
             <td>
-                <a routerLink="/edit-contact/{{ contact.id }}">Edit</a>
+                <button routerLink="/edit-contact/{{ contact.id }}">Edit</button>
                 <button (click)="deleteContact(contact)">Delete</button>
             </td>
             </tr>
@@ -23,4 +23,3 @@
     </table>
     <a class="btn btn-primary btn-lg" routerLink="/home" role="button">home</a>
 </div>
-
