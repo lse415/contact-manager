@@ -36,7 +36,7 @@ export class ContactListComponent implements OnInit {
     this.contactService.deleteContact(contact).subscribe(() => {
       this.contacts = this.contacts.filter(c => c !== contact);
     });
-  }
+  }  
 
   onSubmit(): void {
     const newContact: Contact = {
@@ -47,7 +47,8 @@ export class ContactListComponent implements OnInit {
     };
   
     this.contactService.addContact(newContact);
-    this.contacts = this.contactService.getContacts();
+    this.contacts.push(newContact); 
     this.contactForm.reset();
-  }  
+  }
+  
 }

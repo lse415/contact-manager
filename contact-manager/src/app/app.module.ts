@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router'; 
 
@@ -15,9 +15,6 @@ import { EditContactModule } from './edit-contact/edit-contact.module';
 import { ContactService } from './services/contact.service';
 import { HomeComponent } from './home/home.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,12 +23,12 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
     AddContactModule,
     ContactListModule,
     EditContactModule,
-    ReactiveFormsModule,
     RouterModule.forRoot([ // Add RouterModule to the imports array and configure your routes
       { path: '', component: ContactListComponent },
       { path: 'edit-contact/:id', component: EditContactComponent },

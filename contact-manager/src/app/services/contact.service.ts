@@ -16,9 +16,10 @@ export class ContactService {
 
   constructor() { }
 
-  addContact(contact: Contact): void {
+  addContact(contact: Contact): Contact[] {
     this.contacts.push(contact);
-  }
+    return this.contacts;
+  }  
 
   editContact(contact: Contact): void {
     const index = this.contacts.findIndex(c => c.id === contact.id);
@@ -28,7 +29,7 @@ export class ContactService {
   }
 
   deleteContact(contact: Contact): Observable<void> {
-    const index = this.contacts.findIndex(c => c.id === contact.id);
+    const index = this.contacts.indexOf(contact);
     if (index !== -1) {
       this.contacts.splice(index, 1);
     }
