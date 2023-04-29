@@ -1,25 +1,32 @@
-<div class="contact-list">
-    <h2>Contacts</h2>
-    <table>
-        <thead>
-            <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let contact of contacts">
-            <td>{{ contact.name }}</td>
-            <td>{{ contact.email }}</td>
-            <td>{{ contact.phone }}</td>
-            <td>
-                <button routerLink="/edit-contact/{{ contact.id }}">Edit</button>
-                <button (click)="deleteContact(contact)">Delete</button>
-            </td>
-            </tr>
-        </tbody>
-    </table>
-    <a class="btn btn-primary btn-lg" routerLink="/home" role="button">home</a>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Contacts</h2>
+                <table class="table">
+                <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let contact of contacts">
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td>{{ contact.phone }}</td>
+                    <td>
+                        <button routerLink="/edit-contact/{{ contact.id }}" class="btn btn-sm btn-primary">Edit</button>
+                        <button (click)="deleteContact(contact)" class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+    </div>
 </div>
