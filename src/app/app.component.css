@@ -1,0 +1,29 @@
+/* app.component.css */
+*{
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9c9c9c;
+    color: white;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}

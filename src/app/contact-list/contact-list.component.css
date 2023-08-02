@@ -1,0 +1,28 @@
+.container {
+    margin-top: 3rem;
+}
+
+.card {
+    border: 1%;
+}
+
+.table {
+    margin-top: 2rem;
+}
+
+.card-title {
+    margin-top: 0;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.btn {
+    margin-right: 0.5rem;
+}

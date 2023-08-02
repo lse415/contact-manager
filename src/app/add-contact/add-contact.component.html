@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Add Contact</h2>
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="card-text">
+                <div class="form-group row">
+                    <label for="firstName" class="col-md-2 col-form-label">First Name</label>
+                    <div class="col-md-9">
+                    <input type="text" id="firstName" class="form-control" formControlName="firstName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                    <div class="col-md-9">
+                    <input type="text" id="lastName" class="form-control" formControlName="lastName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="phone" class="col-md-2 col-form-label">Phone</label>
+                    <div class="col-md-9">
+                    <input type="text" id="phone" class="form-control" formControlName="phone" placeholder="000-000-0000">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-md-2 col-form-label">Email</label>
+                    <div class="col-md-9">
+                    <input type="email" id="email" class="form-control" formControlName="email" placeholder="exaple@example.com">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mr-2">Add Contact</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
